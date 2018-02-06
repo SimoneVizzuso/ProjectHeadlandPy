@@ -1,0 +1,13 @@
+Enemy 0 1
+End 0 3
+Lever2 1 1
+Empty 1 2
+LogicGame 1 3
+Empty 2 2
+Torch 3 2
+OldMap 3 3
+Empty 3 4
+Weapon 4 0
+Empty 4 1
+Start 4 2
+Lever1 4 4
