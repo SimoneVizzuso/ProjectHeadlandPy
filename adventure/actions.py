@@ -45,3 +45,7 @@ class ViewObjectDescription(Action):
 class Attack(Action):
     def __init__(self, enemy):
         super().__init__(method=Player.attack, name="Attack", hotkey='A', enemy=enemy)
+
+class Use(Action):
+    def __init__(self, item):
+        super().__init__(method=Player.use, name='Use', hotkey='U', items=item)

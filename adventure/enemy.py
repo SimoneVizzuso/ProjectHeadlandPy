@@ -17,6 +17,7 @@ class Golem(Enemy):
     def __init__(self):
         super().__init__(name="Golem", hp=50, damage=20)
 
+
 class Dragon(Enemy):
     def __init__(self):
         super().__init__(name="Dragon", hp=100, damage=30)

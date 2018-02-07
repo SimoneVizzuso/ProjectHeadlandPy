@@ -39,7 +39,7 @@ class Sword(Weapon):
     def __init__(self):
         super().__init__(name='Sword',
                          description='An old and ruined sword that can still kill some enemy',
-                         damage=15)
+                         damage=20)
 
 
 class OldMap(Item):
