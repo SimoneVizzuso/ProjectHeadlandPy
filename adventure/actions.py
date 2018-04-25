@@ -1,12 +1,12 @@
-from player import Player
+from adventure.player import Player
 
 
-class Action():
-    def __init__(self, method, name, hotkey, **other):
+class Action:
+    def __init__(self, method, name, hotkey, **kwargs):
         self.method = method
         self.hotkey = hotkey
         self.name = name
-        self.other = other
+        self.kwargs = kwargs
 
     def __str__(self):
         return "{}: {}".format(self.hotkey, self.name)
@@ -34,18 +34,19 @@ class MoveWest(Action):
 
 class ViewInventory(Action):
     def __init__(self):
-        super().__init__(method=Player.print_inventory, name='View inventory', hotkey='I')
+        super().__init__(method=Player.view_inventory, name='View inventory', hotkey='I')
 
 
-class ViewObjectDescription(Action):
-    def __init__(self):
-        super().__init__(method=Player.view_object_description, name='View Object Description', hotkey='D')
+"""class ViewObjectDescription(Action):
+    def __init__(self, item):
+        super().__init__(method=Player.view_object_description, name='View Object Description', hotkey='View ' + item.name)
 
 
 class Attack(Action):
     def __init__(self, enemy):
-        super().__init__(method=Player.attack, name="Attack", hotkey='A', enemy=enemy)
+        super().__init__(method=Player.attack, name="Attack", hotkey='Attack', enemy=enemy)
 
-class Use(Action):
-    def __init__(self, item):
-        super().__init__(method=Player.use, name='Use', hotkey='U', items=item)
+
+class UseItem(Action):
+    def __init__(self, enemy):
+        super().__init__(method=Player.use, name='Use Item', hotkey='Use Item', enemy=enemy)"""
